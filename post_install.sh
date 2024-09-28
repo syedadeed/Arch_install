@@ -38,6 +38,7 @@ install_packages ()
     sudo pacman -S --noconfirm bluez-utils
     sudo systemctl enable bluetooth.service
     sudo pacman -S --noconfirm bat
+    sudo pacman -S --noconfirm swww
     sudo pacman -S --noconfirm zoxide
     sudo pacman -S --noconfirm fzf
     sudo pacman -S --noconfirm grim
