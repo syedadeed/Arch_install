@@ -28,6 +28,7 @@ install_packages ()
     sudo pacman -S --noconfirm git
     sudo pacman -S --noconfirm bash-completion
     sudo pacman -S --noconfirm hyprland
+    sudo pacman -S --noconfirm hyprpicker
     sudo pacman -S --noconfirm pipewire
     systemctl --user enable pipewire.service
     sudo pacman -S --noconfirm pipewire-alsa
@@ -64,7 +65,7 @@ configure_wifi
 update_hostname
 install_packages
 
-#hyprpicker, brillo, xremap, cursor theme
+#xremap, Bibata cursor theme
 
 #Silent boot stuff
 touch ~/.hushlogin
