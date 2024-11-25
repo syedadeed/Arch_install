@@ -48,9 +48,5 @@ Miscellaneous:
     noto-fonts-extra
     noto-fonts-emoji
 
-    python-pip
-    python-virtualenv
-    tk
-
     xremap-hypr-bin
 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\

@@ -78,6 +78,7 @@ install_packages ()
     pacstrap -K /mnt linux-headers
     pacstrap -K /mnt lvm2
     pacstrap -K /mnt base-devel
+    pacstrap -K /mnt intel-ucode
     pacstrap -K /mnt networkmanager
 }
 
@@ -98,7 +99,7 @@ configure_system ()
     #Installing bootloader
     arch-chroot /mnt bootctl --path=/boot install
     echo -e "timeout 0\ndefault arch-*" > /mnt/boot/loader/loader.conf
-    echo -e "title\tArch Linux\nlinux\t/vmlinuz-linux\ninitrd\t/initramfs-linux.img\noptions\troot=/dev/mapper/arch-system rootflags=subvol=@system rw quiet loglevel=0 rd.udev.log_level=0 systemd.show_status=false vt.global_cursor_default=0 modprobe.blacklist=iTCO_wdt" > /mnt/boot/loader/entries/arch.conf
+    echo -e "title\tArch Linux\nlinux\t/vmlinuz-linux\ninitrd\t/initramfs-linux.img\noptions\troot=/dev/mapper/arch-system rootflags=subvol=@system rw" > /mnt/boot/loader/entries/arch.conf
 
     #Creating user(adeed)
     arch-chroot /mnt useradd -m -G wheel adeed
@@ -106,7 +107,7 @@ configure_system ()
     echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> /mnt/etc/sudoers
 
     #Editing mkinitcpio.conf for lvm and btrfs support
-    echo -e "MODULES=(btrfs)\nBINARIES=()\nFILES=()\nHOOKS=(base systemd autodetect microcode modconf kms keyboard sd-vconsole block lvm2 filesystems btrfs)" > /mnt/etc/mkinitcpio.conf
+    echo -e "MODULES=(btrfs)\nBINARIES=()\nFILES=()\nHOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block lvm2 btrfs filesystems fsck)" > /mnt/etc/mkinitcpio.conf
     arch-chroot /mnt mkinitcpio -P
 }
 pre_setup
