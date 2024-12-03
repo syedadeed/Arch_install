@@ -5,7 +5,10 @@ configure_wifi ()
     sudo systemctl start NetworkManager && sleep 2
     sudo systemctl enable NetworkManager && sleep 3
     sudo nmcli device wifi list && sleep 5
-    sudo nmcli device wifi connect Airtel password airtel1029 ifname wlp0s20u2 name Home
+    echo "Enter wifi password: "
+    read ps
+    ps="$ps"
+    sudo nmcli device wifi connect Airtel password $ps ifname wlp0s20u2 name Home
     sudo nmcli connection modify Home connection.autoconnect yes
     sudo nmcli connection up Home
 }

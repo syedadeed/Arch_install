@@ -94,7 +94,10 @@ configure_system ()
     arch-chroot /mnt locale-gen
 
     #Setting up root password
-    echo -e "0925\n0925\n" | arch-chroot /mnt passwd
+    echo "Enter root password: "
+    read rp
+    rp="$rp"
+    echo -e "${rp}\n${rp}\n" | arch-chroot /mnt passwd
 
     #Installing bootloader
     arch-chroot /mnt bootctl --path=/boot install
@@ -103,7 +106,10 @@ configure_system ()
 
     #Creating user(adeed)
     arch-chroot /mnt useradd -m -G wheel adeed
-    echo -e "1029\n1029\n" | arch-chroot /mnt passwd adeed
+    echo "Enter user password: "
+    read up
+    up="$up"
+    echo -e "${up}\n${up}\n" | arch-chroot /mnt passwd adeed
     echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> /mnt/etc/sudoers
 
     #Editing mkinitcpio.conf for lvm and btrfs support
