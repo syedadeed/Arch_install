@@ -64,7 +64,6 @@ cli_tools_installation ()
 gui_apps_installation (){
     sudo pacman -Syy --noconfirm kitty
     flatpak install flathub io.github.zen_browser.zen
-    flatpak install flathub md.obsidian.Obsidian
     flatpak install flathub com.obsproject.Studio
     flatpak install flathub org.onlyoffice.desktopeditors
     flatpak install flathub com.stremio.Stremio
