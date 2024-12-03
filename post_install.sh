@@ -62,7 +62,7 @@ cli_tools_installation ()
 }
 
 gui_apps_installation (){
-    flatpak install flathub com.raggesilver.BlackBox
+    sudo pacman -Syy --noconfirm kitty
     flatpak install flathub io.github.zen_browser.zen
     flatpak install flathub md.obsidian.Obsidian
     flatpak install flathub com.obsproject.Studio
