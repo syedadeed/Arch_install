@@ -47,7 +47,6 @@ font_installation ()
 gui_setup ()
 {
     sudo pacman -Syy --noconfirm hyprland
-    sudo pacman -Syy --noconfirm kitty
     sudo pacman -Syy --noconfirm grim
     sudo pacman -Syy --noconfirm slurp
     sudo pacman -Syy --noconfirm hyprpicker
