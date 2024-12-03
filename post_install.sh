@@ -63,11 +63,11 @@ cli_tools_installation ()
 
 gui_apps_installation (){
     sudo pacman -Syy --noconfirm kitty
-    flatpak install flathub io.github.zen_browser.zen
-    flatpak install flathub com.obsproject.Studio
-    flatpak install flathub org.onlyoffice.desktopeditors
-    flatpak install flathub com.stremio.Stremio
-    flatpak install flathub org.gnome.TextEditor
+    flatpak install flathub -y io.github.zen_browser.zen
+    flatpak install flathub -y com.obsproject.Studio
+    sudo pacman -Syy --noconfirm v4l2loopback-dkms
+    flatpak install flathub -y com.stremio.Stremio
+    flatpak install flathub -y org.gnome.TextEditor
 }
 
 configure_wifi
