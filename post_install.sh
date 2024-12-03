@@ -57,11 +57,6 @@ gui_setup ()
 
 cli_tools_installation ()
 {
-    sudo pacman -Syy --noconfirm btop
-    sudo pacman -Syy --noconfirm fzf
-    sudo pacman -Syy --noconfirm bash-completion
-    sudo pacman -Syy --noconfirm man-db
-    sudo pacman -Syy --noconfirm man-pages
     sudo pacman -Syy --noconfirm git github-cli
     sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
 }
