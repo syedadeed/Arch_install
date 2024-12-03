@@ -52,6 +52,7 @@ gui_setup ()
     sudo pacman -Syy --noconfirm slurp
     sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
+    sudo pacman -Syy --noconfirm xdg-desktop-portal-gtk
     sudo pacman -Syy --noconfirm flatpak
 }
 
