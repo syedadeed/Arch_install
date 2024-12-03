@@ -48,26 +48,27 @@ gui_setup ()
 {
     sudo pacman -Syy --noconfirm hyprland
     sudo pacman -Syy --noconfirm kitty
-    sudo pacman -Syy --noconfirm firefox
-    sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm grim
     sudo pacman -Syy --noconfirm slurp
-    sudo pacman -Syy --noconfirm swww
+    sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
+    sudo pacman -Syy --noconfirm flatpak
 }
 
 cli_tools_installation ()
 {
-    sudo pacman -Syy --noconfirm android-tools
-    sudo pacman -Syy --noconfirm bash-completion
-    sudo pacman -Syy --noconfirm fzf
-    sudo pacman -Syy --noconfirm git
-    sudo pacman -Syy --noconfirm github-cli
-    sudo pacman -Syy --noconfirm man-db
-    sudo pacman -Syy --noconfirm man-pages
-    sudo pacman -Syy --noconfirm neovim
-    sudo pacman -Syy --noconfirm unzip
-    sudo pacman -Syy --noconfirm wl-clipboard
+    sudo pacman -Syy --noconfirm git github-cli
+    sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
+}
+
+gui_apps_installation (){
+    flatpak install flathub com.raggesilver.BlackBox
+    flatpak install flathub io.github.zen_browser.zen
+    flatpak install flathub md.obsidian.Obsidian
+    flatpak install flathub com.obsproject.Studio
+    flatpak install flathub org.onlyoffice.desktopeditors
+    flatpak install flathub com.stremio.Stremio
+    flatpak install flathub org.gnome.TextEditor
 }
 
 configure_wifi
