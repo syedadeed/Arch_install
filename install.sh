@@ -78,11 +78,7 @@ install_packages ()
     pacstrap -K /mnt linux-headers
     pacstrap -K /mnt lvm2
     pacstrap -K /mnt base-devel
-    pacstrap -K /mnt intel-ucode
     pacstrap -K /mnt networkmanager
-    pacstrap -K /mnt bash-completion
-    pacstrap -K /mnt man-db
-    pacstrap -K /mnt man-pages
 }
 
 configure_system ()

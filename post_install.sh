@@ -52,13 +52,28 @@ gui_setup ()
     sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
     sudo pacman -Syy --noconfirm xdg-desktop-portal-gtk
+    sudo pacman -Syy --noconfirm xdg-user-dirs
     sudo pacman -Syy --noconfirm flatpak
 }
 
 cli_tools_installation ()
 {
+    sudo pacman -Syy --noconfirm bash-completion
+    sudo pacman -Syy --noconfirm man-db man-pages
     sudo pacman -Syy --noconfirm git github-cli
     sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
+}
+
+driver_installation ()
+{
+    sudo pacman -Syy --noconfirm intel-ucode
+    sudo pacman -Syy --noconfirm intel-media-driver
+    sudo pacman -Syy --noconfirm libva-intel-driver
+    sudo pacman -Syy --noconfirm vulkan-intel
+    sudo pacman -Syy --noconfirm vulkan-mesa-layers
+    sudo pacman -Syy --noconfirm vulkan-radeon
+    sudo pacman -Syy --noconfirm xf86-video-amdgpu
+    sudo pacman -Syy --noconfirm xf86-video-ati
 }
 
 gui_apps_installation (){
@@ -67,7 +82,6 @@ gui_apps_installation (){
     flatpak install flathub -y com.obsproject.Studio
     sudo pacman -Syy --noconfirm v4l2loopback-dkms
     flatpak install flathub -y com.stremio.Stremio
-    flatpak install flathub -y org.gnome.TextEditor
 }
 
 configure_wifi
@@ -77,5 +91,6 @@ bluetooth_setup
 font_installation
 gui_setup
 cli_tools_installation
+driver_installation
 
 #xremap, Bibata cursor theme
