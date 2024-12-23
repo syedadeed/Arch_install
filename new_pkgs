@@ -1,0 +1,34 @@
+prog Langs
+    deno
+    go
+    nasm
+    rust
+    kotlin
+    jdk-openjdk
+    mariadb
+
+prog Lang tools
+    clang
+    cmake
+    gdb
+    lua-sec
+    luarocks
+    python-pip
+    python-pynvim
+    python-virtualenv
+    tk
+
+cli tools
+    btop
+    fd
+    fzf
+    ripgrep
+    tree
+    yazi
+
+gui libs/tools
+    dunst
+    libnotify
+    qt5-wayland
+
+jetbrains-toolbox
