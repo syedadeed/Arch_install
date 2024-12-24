@@ -55,6 +55,9 @@ gui_setup ()
     sudo pacman -Syy --noconfirm xdg-desktop-portal-gtk
     sudo pacman -Syy --noconfirm xdg-user-dirs
     sudo pacman -Syy --noconfirm flatpak
+    sudo pacman -Syy --noconfirm dunst
+    sudo pacman -Syy --noconfirm libnotify
+    sudo pacman -Syy --noconfirm qt5-wayland
 }
 
 cli_tools_installation ()
@@ -63,34 +66,6 @@ cli_tools_installation ()
     sudo pacman -Syy --noconfirm man-db man-pages
     sudo pacman -Syy --noconfirm git github-cli
     sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
-    sudo pacman -Syy --noconfirm rust
-    sudo pacman -Syy --noconfirm go
-    sudo pacman -Syy --noconfirm jdk-openjdk
-    sudo pacman -Syy --noconfirm kotlin
-    sudo pacman -Syy --noconfirm nasm
-    sudo pacman -Syy --noconfirm node
-    sudo pacman -Syy --noconfirm typescript
-    sudo pacman -Syy --noconfirm mariadb
-    sudo systemctl enable mariadb.service
-    sudo systemctl start mariadb.service
-    sudo pacman -Syy --noconfirm clang
-    sudo pacman -Syy --noconfirm cmake
-    sudo pacman -Syy --noconfirm gdb
-    sudo pacman -Syy --noconfirm lua-sec
-    sudo pacman -Syy --noconfirm luarocks
-    sudo pacman -Syy --noconfirm python-pip
-    sudo pacman -Syy --noconfirm python-pynvim
-    sudo pacman -Syy --noconfirm python-virtualenv
-    sudo pacman -Syy --noconfirm tk
-    sudo pacman -Syy --noconfirm btop
-    sudo pacman -Syy --noconfirm fd
-    sudo pacman -Syy --noconfirm fzf
-    sudo pacman -Syy --noconfirm ripgrep
-    sudo pacman -Syy --noconfirm tree
-    sudo pacman -Syy --noconfirm yazi
-    sudo pacman -Syy --noconfirm dunst
-    sudo pacman -Syy --noconfirm libnotify
-    sudo pacman -Syy --noconfirm qt5-wayland
 }
 
 driver_installation ()
