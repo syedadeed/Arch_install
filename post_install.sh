@@ -67,6 +67,7 @@ cli_tools_installation ()
     sudo pacman -Syy --noconfirm git github-cli
     sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
     sudo pacman -Syy --noconfirm npm typescript
+    sudo pacman -Syy --noconfirm python-virtualenv python-pip tk
 }
 
 driver_installation ()
