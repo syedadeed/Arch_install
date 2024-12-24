@@ -1,12 +1,3 @@
-prog Langs
-    deno
-    go
-    nasm
-    rust
-    kotlin
-    jdk-openjdk
-    mariadb
-
 prog Lang tools
     clang
     cmake

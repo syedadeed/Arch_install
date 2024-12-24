@@ -63,6 +63,9 @@ cli_tools_installation ()
     sudo pacman -Syy --noconfirm man-db man-pages
     sudo pacman -Syy --noconfirm git github-cli
     sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
+    sudo pacman -Syy --noconfirm rust go jdk-openjdk kotlin nasm node mariadb typescript
+    sudo systemctl enable mariadb.service
+    sudo systemctl start mariadb.service
 }
 
 driver_installation ()
