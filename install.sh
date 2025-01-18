@@ -39,7 +39,7 @@ disk_setup ()
     #Creating logical volumes(system, home)
     lvcreate -L 100G arch -n system
     lvcreate -l 100%FREE arch -n home
- 
+
     #Activating logical volumes
     vgchange -ay
 
