@@ -47,17 +47,7 @@ font_installation ()
 gui_setup ()
 {
     sudo pacman -Syy --noconfirm hyprland
-    sudo pacman -Syy --noconfirm polkit-kde-agent
-    sudo pacman -Syy --noconfirm grim
-    sudo pacman -Syy --noconfirm slurp
-    sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
-    sudo pacman -Syy --noconfirm xdg-desktop-portal-gtk
-    sudo pacman -Syy --noconfirm xdg-user-dirs
-    sudo pacman -Syy --noconfirm flatpak
-    sudo pacman -Syy --noconfirm dunst
-    sudo pacman -Syy --noconfirm libnotify
-    sudo pacman -Syy --noconfirm qt5-wayland
 }
 
 cli_tools_installation ()
@@ -84,12 +74,13 @@ driver_installation ()
     sudo pacman -Syy --noconfirm xf86-video-ati
 }
 
-gui_apps_installation (){
+gui_apps_installation ()
+{
+    sudo pacman -Syy --noconfirm grim
+    sudo pacman -Syy --noconfirm slurp
+    sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm kitty
-    flatpak install flathub -y io.github.zen_browser.zen
-    flatpak install flathub -y com.obsproject.Studio
-    sudo pacman -Syy --noconfirm v4l2loopback-dkms
-    flatpak install flathub -y com.stremio.Stremio
+    sudo pacman -Syy --noconfirm firefox
 }
 
 configure_wifi
