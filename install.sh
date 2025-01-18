@@ -91,6 +91,8 @@ configure_system ()
     arch-chroot /mnt hwclock --systohc --utc
     echo en_US.UTF-8 UTF-8 > /mnt/etc/locale.gen
     arch-chroot /mnt locale-gen
+    touch /mnt/etc/locale.conf
+    echo LANG=en_US.UTF-8 > /mnt/etc/locale.conf
 
     #Setting up root password
     echo "Enter root password: "
