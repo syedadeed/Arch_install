@@ -80,7 +80,7 @@ gui_apps_installation ()
     sudo pacman -Syy --noconfirm slurp
     sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm kitty
-    sudo pacman -Syy --noconfirm chromium
+    sudo pacman -Syy --noconfirm firefox
     sudo pacman -Syy --noconfirm mpv
 }
 
