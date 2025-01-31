@@ -48,6 +48,7 @@ gui_setup ()
 {
     sudo pacman -Syy --noconfirm hyprland
     sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
+    sudo pacman -Syy --noconfirm swww
 }
 
 cli_tools_installation ()
