@@ -19,6 +19,16 @@ update_hostname ()
     echo -e "127.0.0.1 localhost\n127.0.1.1 arch" | sudo tee -a /etc/hosts
 }
 
+chaotic_aur_setup()
+{
+    sudo pacman-key --recv-key 3056513887B78AEB --keyserver keyserver.ubuntu.com
+    sudo pacman-key --lsign-key 3056513887B78AEB
+    sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst'
+    sudo pacman -U --noconfirm 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
+    echo -e "[chaotic-aur]\nInclude = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf
+    sudo pacman -Syyu --noconfirm
+}
+
 audio_setup ()
 {
     sudo pacman -Syy --noconfirm pipewire
@@ -81,12 +91,14 @@ driver_installation ()
 gui_apps_installation ()
 {
     sudo pacman -Syy --noconfirm kitty
-    sudo pacman -Syy --noconfirm firefox
+    sudo pacman -Syy --noconfirm zen-browser-bin
+    sudo pacman -Syy --noconfirm stremio
     sudo pacman -Syy --noconfirm mpv
 }
 
 configure_wifi
 update_hostname
+chaotic_aur_setup
 audio_setup
 bluetooth_setup
 font_installation
