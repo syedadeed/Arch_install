@@ -49,6 +49,9 @@ gui_setup ()
     sudo pacman -Syy --noconfirm hyprland
     sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
     sudo pacman -Syy --noconfirm swww
+    sudo pacman -Syy --noconfirm grim
+    sudo pacman -Syy --noconfirm slurp
+    sudo pacman -Syy --noconfirm hyprpicker
 }
 
 cli_tools_installation ()
@@ -77,9 +80,6 @@ driver_installation ()
 
 gui_apps_installation ()
 {
-    sudo pacman -Syy --noconfirm grim
-    sudo pacman -Syy --noconfirm slurp
-    sudo pacman -Syy --noconfirm hyprpicker
     sudo pacman -Syy --noconfirm kitty
     sudo pacman -Syy --noconfirm firefox
     sudo pacman -Syy --noconfirm mpv
