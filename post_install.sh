@@ -8,7 +8,7 @@ configure_wifi ()
     echo "Enter wifi password: "
     read ps
     ps="$ps"
-    sudo nmcli device wifi connect Airtel password $ps ifname wlp0s20u2 name Home
+    sudo nmcli device wifi connect Airtel password $ps
     sudo nmcli connection modify Home connection.autoconnect yes
     sudo nmcli connection up Home
 }
