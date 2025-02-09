@@ -74,7 +74,7 @@ cli_tools_installation ()
     sudo pacman -Syy --noconfirm go
     sudo pacman -Syy --noconfirm python-virtualenv python-pip tk
     sudo pacman -Syy --noconfirm luarocks
-    sudo pacman -S docker docker-compose
+    sudo pacman -Syy --noconfirm docker docker-compose
     sudo systemctl enable docker.socket
     sudo btrfs subvolume create /var/lib/docker
     sudo mkdir /etc/docker
