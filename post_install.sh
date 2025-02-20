@@ -98,7 +98,7 @@ gui_apps_installation ()
 {
     sudo pacman -Syy --noconfirm kitty
     sudo pacman -Syy --noconfirm zen-browser-bin
-    sudo pacman -Syy --noconfirm mpv
+    sudo pacman -Syy --noconfirm ffmpeg
 }
 
 configure_wifi
