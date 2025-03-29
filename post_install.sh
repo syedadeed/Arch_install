@@ -62,18 +62,21 @@ gui_setup ()
     sudo pacman -Syy --noconfirm grim
     sudo pacman -Syy --noconfirm slurp
     sudo pacman -Syy --noconfirm hyprpicker
+    sudo pacman -Syy --noconfirm wl-clipboard wf-recorder
 }
 
 cli_tools_installation ()
 {
-    sudo pacman -Syy --noconfirm bash-completion
+    sudo pacman -Syy --noconfirm bash-completion btop tree
     sudo pacman -Syy --noconfirm man-db man-pages
     sudo pacman -Syy --noconfirm git github-cli
-    sudo pacman -Syy --noconfirm neovim unzip wl-clipboard
+    sudo pacman -Syy --noconfirm neovim unzip
     sudo pacman -Syy --noconfirm npm
     sudo pacman -Syy --noconfirm go
     sudo pacman -Syy --noconfirm python-virtualenv python-pip tk
     sudo pacman -Syy --noconfirm luarocks
+    sudo pacman -Syy --noconfirm gdb meson
+    sudo pacman -Syy --noconfirm nasm
     sudo pacman -Syy --noconfirm docker docker-compose
     sudo systemctl enable docker.socket
     sudo btrfs subvolume create /var/lib/docker
@@ -98,7 +101,7 @@ gui_apps_installation ()
 {
     sudo pacman -Syy --noconfirm kitty
     sudo pacman -Syy --noconfirm zen-browser-bin
-    sudo pacman -Syy --noconfirm ffmpeg
+    sudo pacman -Syy --noconfirm mpv
 }
 
 configure_wifi
