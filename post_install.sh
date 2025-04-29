@@ -57,7 +57,7 @@ font_installation ()
 gui_setup ()
 {
     sudo pacman -Syy --noconfirm hyprland
-    sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland
+    sudo pacman -Syy --noconfirm xdg-desktop-portal-hyprland xdg-desktop-portal-wlr
     sudo pacman -Syy --noconfirm swww
     sudo pacman -Syy --noconfirm grim
     sudo pacman -Syy --noconfirm slurp
