@@ -16,7 +16,7 @@ configure_wifi ()
 update_hostname ()
 {
     sudo hostnamectl set-hostname arch
-    echo -e "127.0.0.1 localhost\n127.0.1.1 arch" | sudo tee -a /etc/hosts
+    echo -e "127.0.0.1 localhost\n::1 localhost\n127.0.1.1 arch" | sudo tee -a /etc/hosts
 }
 
 chaotic_aur_setup()
