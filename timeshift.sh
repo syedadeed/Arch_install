@@ -8,7 +8,9 @@ create() {
 }
 
 restore() {
-    sudo mount /dev/arch/system /mnt
+    local disk_name="$1"
+    sudo mount "${disk_name}" /mnt
+    #example /dev/sdb2
     sudo rm -rf /mnt/@system/*
     sudo btrfs subvolume delete /mnt/@system
     sudo btrfs subvolume snapshot / /mnt/@system
@@ -27,6 +29,6 @@ elif [[ "$1" == "-r" ]]; then
 elif [[ "$1" == "-m" ]]; then
     maintainance
 else
-    echo "Usage: $0 {-c snapshot_name | -r | -m}"
+    echo "Usage: $0 {-c snapshot_name | -r disk_name| -m}"
     exit 1
 fi
