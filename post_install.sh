@@ -62,7 +62,8 @@ gui_setup ()
     sudo pacman -Syy --noconfirm grim
     sudo pacman -Syy --noconfirm slurp
     sudo pacman -Syy --noconfirm hyprpicker
-    sudo pacman -Syy --noconfirm wl-clipboard wf-recorder
+    sudo pacman -Syy --noconfirm wl-clipboard
+    sudo pacman -Syy --noconfirm brightnessctl
 }
 
 cli_tools_installation ()
@@ -75,8 +76,8 @@ cli_tools_installation ()
     sudo pacman -Syy --noconfirm go
     sudo pacman -Syy --noconfirm python-virtualenv python-pip tk
     sudo pacman -Syy --noconfirm luarocks
-    sudo pacman -Syy --noconfirm gdb meson
-    sudo pacman -Syy --noconfirm nasm
+    sudo pacman -Syy --noconfirm gdb meson cmake
+    sudo pacman -Syy --noconfirm android-tools
     sudo pacman -Syy --noconfirm docker docker-compose
     sudo systemctl enable docker.socket
     sudo btrfs subvolume create /var/lib/docker
